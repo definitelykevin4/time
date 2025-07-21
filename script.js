@@ -315,3 +315,30 @@ document.getElementById('add-form').addEventListener('submit', (e) => {
     resultEl.textContent = 'Error: ' + err.message;
   }
 });
+
+// Subtract Earth Time from Cybertronian Date
+document.getElementById('subtract-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const cyberInput = document.getElementById('subtract-date').value;
+  const earthInput = document.getElementById('subtract-earth-time').value;
+  const resultEl = document.getElementById('subtract-result');
+
+  try {
+    const date = parseCybertronianDate(cyberInput);
+    if (!date) throw new Error('Invalid cybertronian date format.');
+    const earthSecondsToSubtract = parseHumanTime(earthInput);
+    if (earthSecondsToSubtract <= 0) throw new Error('Invalid or zero Earth time to subtract.');
+
+    const startSeconds = cyberDateToEarthSeconds(date);
+    const newSeconds = startSeconds - earthSecondsToSubtract;
+    if (newSeconds < 0) throw new Error('Resulting date is before the start of Cybertronian time.');
+
+    const newDate = earthSecondsToCyberDate(newSeconds);
+    const formatted = formatCyberDate(newDate);
+
+    resultEl.textContent = `Cybertronian Date after subtracting time:\n${formatted}`;
+  } catch (err) {
+    resultEl.textContent = 'Error: ' + err.message;
+  }
+});
+

@@ -1,157 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
-:root {
-  --primary-color: #0057a3; /* Cybertron blue */
-  --secondary-color: #ffbf00; /* Energon yellow */
-  --background-color: #0a0a0a;
-  --text-color: #d0d0d0;
-  --accent-color: #00e5ff;
-  --error-color: #ff4c4c;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  font-family: 'Orbitron', monospace, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  background-color: var(--primary-color);
-  padding: 1rem 2rem;
-  text-align: center;
-  color: var(--secondary-color);
-  box-shadow: 0 0 15px var(--accent-color);
-}
-
-header h1 {
-  margin: 0 0 0.5rem 0;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.tab-button {
-  background: transparent;
-  border: 2px solid var(--secondary-color);
-  padding: 0.5rem 1.2rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.tab-button:hover,
-.tab-button.active {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  box-shadow: 0 0 10px var(--secondary-color);
-}
-
-main {
-  flex-grow: 1;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0a0a;
+  color: #00ffff;
   padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #111;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #003b66;
 }
 
-h2 {
-  margin-top: 0;
-  color: var(--accent-color);
-  letter-spacing: 0.1em;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-label {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--secondary-color);
-}
-
-input[type='text'] {
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  border: none;
-  font-family: monospace;
-  font-size: 1rem;
-  outline: none;
-}
-
-input[type='text']:focus {
-  box-shadow: 0 0 8px var(--accent-color);
-  border: 1px solid var(--accent-color);
-  background-color: #121212;
-  color: var(--text-color);
-}
-
-small {
-  color: #777;
-  font-style: italic;
-}
-
-button[type='submit'] {
-  background-color: var(--secondary-color);
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 10px;
-  color: var(--primary-color);
-  transition: background-color 0.3s ease;
-}
-
-button[type='submit']:hover {
-  background-color: #ffd843;
-}
-
-.result {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: #222;
-  border-radius: 8px;
-  font-family: monospace;
-  white-space: pre-wrap;
-  min-height: 4em;
-  color: var(--accent-color);
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-footer {
+h1 {
+  color: #ffcc00;
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  background-color: #111;
   padding: 1rem;
-  font-size: 0.9rem;
-  color: #444;
+  margin-bottom: 2rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+input, select, button {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #222;
+  border: 1px solid #444;
+  color: #00ffff;
+  font-family: monospace;
+}
+
+button {
+  background-color: #006666;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #009999;
+}
+
+pre {
   background-color: #000;
-  border-top: 1px solid #111;
+  padding: 0.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-left: 4px solid #00ffff;
+}
+
+select {
   font-family: monospace;
 }

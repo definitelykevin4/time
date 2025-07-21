@@ -13,6 +13,7 @@
       <button class="tab-button active" data-tab="explain">Explain Date</button>
       <button class="tab-button" data-tab="compare">Compare Dates</button>
       <button class="tab-button" data-tab="add">Add Earth Time</button>
+      <button class="tab-button" data-tab="subtract">Subtract Earth Time</button>
     </nav>
   </header>
 
@@ -22,12 +23,7 @@
       <h2>Explain a Cybertronian Date</h2>
       <form id="explain-form">
         <label for="explain-date">Enter Cybertronian Date</label>
-        <input
-          type="text"
-          id="explain-date"
-          placeholder="e.g. 54 arc 4 593 arc 129"
-          required
-        />
+        <input type="text" id="explain-date" placeholder="e.g. 54 arc 4 593 arc 129" required />
         <small>Format: [klik] [chord cycle] arc [solar cycle] or similar</small>
         <button type="submit">Explain</button>
       </form>
@@ -39,19 +35,9 @@
       <h2>Compare Two Cybertronian Dates</h2>
       <form id="compare-form">
         <label for="compare-date1">First Cybertronian Date</label>
-        <input
-          type="text"
-          id="compare-date1"
-          placeholder="e.g. 54 arc 4 593 arc 129"
-          required
-        />
+        <input type="text" id="compare-date1" placeholder="e.g. 54 arc 4 593 arc 129" required />
         <label for="compare-date2">Second Cybertronian Date</label>
-        <input
-          type="text"
-          id="compare-date2"
-          placeholder="e.g. 55 arc 0 0 arc 130"
-          required
-        />
+        <input type="text" id="compare-date2" placeholder="e.g. 55 arc 0 0 arc 130" required />
         <button type="submit">Compare</button>
       </form>
       <div id="compare-result" class="result"></div>
@@ -62,22 +48,25 @@
       <h2>Add Earth Time to a Cybertronian Date</h2>
       <form id="add-form">
         <label for="add-date">Starting Cybertronian Date</label>
-        <input
-          type="text"
-          id="add-date"
-          placeholder="e.g. 54 arc 4 593 arc 129"
-          required
-        />
+        <input type="text" id="add-date" placeholder="e.g. 54 arc 4 593 arc 129" required />
         <label for="add-earth-time">Earth Time to Add</label>
-        <input
-          type="text"
-          id="add-earth-time"
-          placeholder="e.g. 2 years, 5 hours, 30 minutes"
-          required
-        />
+        <input type="text" id="add-earth-time" placeholder="e.g. 2 years, 5 hours, 30 minutes" required />
         <button type="submit">Calculate</button>
       </form>
       <div id="add-result" class="result"></div>
+    </section>
+
+    <!-- Subtract Earth Time Tab -->
+    <section id="subtract" class="tab-content">
+      <h2>Subtract Earth Time from a Cybertronian Date</h2>
+      <form id="subtract-form">
+        <label for="subtract-date">Starting Cybertronian Date</label>
+        <input type="text" id="subtract-date" placeholder="e.g. 54 arc 4 593 arc 129" required />
+        <label for="subtract-earth-time">Earth Time to Subtract</label>
+        <input type="text" id="subtract-earth-time" placeholder="e.g. 1 year, 2 days, 10 minutes" required />
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="subtract-result" class="result"></div>
     </section>
   </main>
 
